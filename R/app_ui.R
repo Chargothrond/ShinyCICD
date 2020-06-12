@@ -22,7 +22,8 @@ app_ui <- function(request) {
 
       # Show a plot of the generated distribution
       mainPanel(
-        plotOutput("distPlot")
+        plotOutput("distPlot"),
+        DT::DTOutput("table")
       )
     )
   )
