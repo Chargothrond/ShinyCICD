@@ -1,4 +1,8 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+language: R
+r:
+ - 3.6
+
 cache:
   directories:
   - $HOME/.local/share/renv
@@ -7,8 +11,3 @@ cache:
 install:
   - Rscript -e "if (!requireNamespace('renv', quietly = TRUE)) install.packages('renv')"
   - Rscript -e "renv::restore()"
-
-language: R
-r:
- - 3.6
-cache: packages
