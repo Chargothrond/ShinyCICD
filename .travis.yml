@@ -9,4 +9,6 @@ install:
   - Rscript -e "renv::restore()"
 
 language: R
+r:
+ - 3.6
 cache: packages
